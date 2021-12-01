@@ -1,0 +1,25 @@
+1. mysql 에 메모장에 첨부한내용 넣어주세요
+-----
+CREATE SCHEMA 'mvcboard' DEFAULT CHARACTER SET utf8;
+    CREATE TABLE `tbl_board` (
+  `bno` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `content` text NOT NULL,
+  `writer` varchar(30) NOT NULL,
+  `regDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `viewCnt` int DEFAULT '0',
+  PRIMARY KEY (`bno`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+----- 
+2. eclipse 들어가셔서 mvcboard import 하신 후에
+src > main > wepapp > spring >
+root-context.xml에 있는 18번째라인에 password 1234을
+기존에 쓰시는 비밀번호로 변경해주세요
+-----
+
+ps. 정말...조회수랑 답글안되는건 죄송합니다...
+아무리해도 그부분은 역량이 안되어서 오류나서 안되겠더라구요..
+나중에 그부분은 차차혼자 연습해볼게요....
+으흑흑흑.... 점수가 깎이더라도 안내는것보단 낫다고 판단해서
+crud만 되게끔 했습니다 ;ㅁ;
